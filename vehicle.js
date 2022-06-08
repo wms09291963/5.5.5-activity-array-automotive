@@ -9,6 +9,7 @@ class Vehicle {
         this.mileage = mileage;
         this.started = false;
         this.numberOfWheels = 0;
+        this.fuel = 100
     }
 
     start() {
@@ -52,6 +53,7 @@ class Vehicle {
         }
     }
     stop() {
+        console.log('engine off')
         this.started = false;
     }
 
@@ -72,12 +74,12 @@ class Vehicle {
       
     }
 
-    typeOfVehicle(wheels) {
-        if (this.numberOfWheels == 8 && 8 == wheels) {
+    typeOfVehicle() {
+        if (this.numberOfWheels == 8) {
             console.log(this.model + " " + this.make + " is a Truck");
-        } else if (this.numberOfWheels == 4 && 4 == wheels) {
-            console.log(this.model + " " + this.make + " is a CAr");
-        } else if (this.numberOfWheels == 2 && 2 == wheels) {
+        } else if (this.numberOfWheels == 4) {
+            console.log(this.model + " " + this.make + " is a Car");
+        } else if (this.numberOfWheels == 2) {
             console.log(this.model + " " + this.make + " is a Bike");
         } else {
             console.log("Unknown type of vehicle");
